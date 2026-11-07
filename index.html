@@ -695,6 +695,105 @@ function Iv(){const average=$v.reduce((sum,item)=>sum+liveNumber(item.change),0)
   .candidate-panel,.stock-inspector,.sell-summary,.review-hero{border-radius:13px}
 }
 </style>
+    <style id="layout-refinement">
+      .workspace{
+        width:100%;
+        max-width:1540px;
+        margin:0 auto;
+        padding:0 clamp(22px,2.2vw,40px) 36px;
+      }
+      .topbar{min-height:94px}
+      .topbar-title h1{font-size:28px;letter-spacing:-.04em}
+      .eyebrow,.section-kicker{font-size:10.5px}
+      .market-overview{
+        min-height:112px;
+        border-radius:24px;
+        box-shadow:0 20px 54px rgba(20,33,27,.065);
+      }
+      .market-regime{padding:22px}
+      .index-strip{padding:18px}
+      .index-item{gap:6px}
+      .index-item>span{font-size:10.5px}
+      .index-item strong{font-size:15px}
+      .screener-layout{
+        grid-template-columns:minmax(0,1fr) minmax(350px,378px);
+        gap:22px;
+        margin-top:20px;
+      }
+      .candidate-panel,.stock-inspector{border-radius:24px}
+      .section-heading{padding:23px 24px 18px}
+      .section-heading h2{font-size:21px}
+      .pool-counts{font-size:10.5px}
+      .stock-table thead th{height:38px;font-size:10px}
+      .stock-identity strong{font-size:13px}
+      .stock-identity span{font-size:9px}
+      .score-cell strong{font-size:12px}
+      .row-action{width:30px;height:30px;border-radius:9px}
+      .stock-inspector{padding:22px}
+
+      @media(max-width:1320px){
+        .workspace{padding-inline:24px}
+        .screener-layout{grid-template-columns:minmax(0,1fr) 350px}
+      }
+      @media(max-width:940px){
+        .workspace{padding:0 16px 26px}
+        .market-overview{grid-template-columns:1fr}
+        .screener-layout{grid-template-columns:minmax(0,1fr)}
+        .stock-inspector{width:100%}
+      }
+      @media(max-width:680px){
+        .sidebar{height:60px;padding:7px 12px;box-shadow:0 8px 24px rgba(11,20,16,.16)}
+        .brand-mark{width:42px;height:42px}
+        .brand-symbol{width:34px;height:34px}
+        .main-nav{gap:2px}
+        .nav-item{width:40px;height:40px;border-radius:12px}
+        .workspace{padding:0 10px calc(22px + env(safe-area-inset-bottom))}
+        .topbar{min-height:84px;padding:10px 2px;border-bottom:1px solid var(--line)}
+        .topbar-title h1{margin-top:4px;font-size:26px}
+        .refresh-button{width:44px;height:44px;border-radius:14px}
+        .market-overview{
+          grid-template-columns:1fr;
+          min-height:0;
+          border-radius:18px;
+          box-shadow:0 14px 34px rgba(20,33,27,.06);
+        }
+        .market-regime{
+          gap:10px;
+          padding:16px;
+          border-right:0;
+          border-bottom:1px solid var(--line);
+        }
+        .regime-icon{display:grid;flex-basis:34px;width:34px;height:34px}
+        .regime-copy strong{font-size:16px}
+        .index-strip{grid-template-columns:repeat(3,minmax(0,1fr));padding:15px 8px}
+        .index-item{gap:4px;padding:0 8px}
+        .index-item>span{font-size:9px}
+        .index-item strong{font-size:12.5px}
+        .index-item em{font-size:9px}
+        .screener-layout{gap:14px;margin-top:14px}
+        .candidate-panel{border-radius:18px}
+        .section-heading{padding:19px 16px 15px}
+        .section-heading h2{font-size:21px}
+        .pool-counts{gap:2px;font-size:9px}
+        .pool-counts b{font-size:12px}
+        .screener-toolbar{padding:11px;gap:10px}
+        .filter-tabs{gap:3px;padding:4px;background:#f1f2ed;border-radius:12px}
+        .filter-tabs button{min-height:32px;border-radius:9px}
+        .search-box,.filter-button{height:40px}
+        .stock-table thead th{height:37px;font-size:9px}
+        .stock-table td{height:58px;font-size:10px}
+        .stock-avatar{width:30px;height:30px}
+        .stock-identity strong{font-size:12px}
+        .stock-identity span{font-size:8px}
+        .score-cell strong{font-size:12px}
+        .row-action{width:34px;height:34px;border-radius:10px}
+        .stock-inspector{
+          margin-top:2px;
+          padding:19px 16px calc(20px + env(safe-area-inset-bottom));
+          border-radius:18px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
