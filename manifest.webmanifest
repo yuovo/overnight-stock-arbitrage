@@ -1,0 +1,20 @@
+{
+  "name": "隔夜选股套利",
+  "short_name": "隔夜选股",
+  "description": "A 股尾盘选股与次日卖出执行面板",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f4f1",
+  "theme_color": "#17221e",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
