@@ -638,7 +638,7 @@ async function liveEnrichMarket(payload, focusCodes, selectedCode, forceHistory)
     if (sectorResult.status === "fulfilled") {
       liveApplySectors(sectorResult.value);
     } else {
-      Fv.splice(0, Fv.length, { name: "板块接口恢复中", change: 0, flow: "自动重试" });
+      Fv.splice(0, Fv.length, { name: "板块接口恢复中", change: 0, flow: "个股行情正常" });
     }
 
     const marketRows = marketResult.status === "fulfilled" ? marketResult.value.rows : [];
@@ -700,7 +700,7 @@ $v.forEach(item => {
   item.value = "--";
   item.change = 0;
 });
-Fv.splice(0, Fv.length, { name: "正在加载", change: 0, flow: "实时行情" });
+Fv.splice(0, Fv.length, { name: "板块数据恢复中", change: 0, flow: "个股行情正常" });
 $e.forEach(item => {
   Object.assign(item, {
     price: 0,
